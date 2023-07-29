@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: sans-serif;
+}
+
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    min-height: 200px;
+
+    @media (max-width:1280px){
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+body{
+    background-image: linear-gradient(to bottom,hsl(217, 47%, 30%) 0%,hsl(218, 28%, 13%) 28%, hsl(218, 28%, 13%) 29%,hsl(218, 28%, 13%) 100%);
+
+    @media (max-width:768px){
+        background-image: linear-gradient(to bottom,hsl(217, 47%, 30%) 0%,hsl(217, 47%, 30%) 10%, hsl(218, 28%, 13%) 11%,hsl(218, 28%, 13%) 100%);
+    }
+}
+
+.container1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 5%;
+    margin-top: 80px;
+    padding: 16px;
+
+    @media (max-width:768px){
+        display: block;
+    }
+}
+
+.container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 5%;
+    margin-top: 80px;
+    padding: 0 32px;
+    position: relative;
+    min-height: 1px;
+
+    @media (max-width:1280px){
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    @media (max-width:768px){
+        grid-template-columns: 1fr;
+    }
+}
+
+.container2::after{
+    content: url(./images/bg-quotes.png);
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    z-index: -1;
+}
+
+.shape{
+    width: 100%;
+    position: relative;
+}
+
+.shape::after{
+    content: url(./images/wave.svg);
+    position: absolute;
+    top: -500px;
+    left: 0;
+    width: 100%;
+    z-index: -10;
+}

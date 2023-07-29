@@ -1,0 +1,7 @@
+.footer{
+    min-height: 400px;
+    background-color: hsl(216, 53%, 9%);
+    padding:160px 120px;
+    z-index: -100;
+    color: white;
+}
