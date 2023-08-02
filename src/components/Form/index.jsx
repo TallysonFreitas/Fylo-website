@@ -15,7 +15,7 @@ export default ()=>{
                 ):(
                     <>
                         <input className={style.input} type="email" placeholder="Your email" onKeyUp={(event)=>{setEmailUser(event.target.value)}}/>
-                        <button className={style.button} type="submit" onSubmit={()=>{setSign(!sign)}}>Get Started For Free</button>
+                        <button className={style.button} type="submit" onClick={(e)=>{e.preventDefault(), setSign(!sign)}}>Get Started For Free</button>
                     </>
                 )}
             </form>
